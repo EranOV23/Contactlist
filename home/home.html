@@ -1,0 +1,38 @@
+<!-- Placeholder for the navbar -->
+<nav></nav>
+
+<!-- List of contacts -->
+<div class="container-fluid" id="contacsList">
+
+	<div class="row">
+
+		<!-- A single contact -->
+		<div class="thumbnail col-sm-3" id="contact" ng-repeat="contacts in allContacts | filter:search">
+
+			<!-- Card Image -->
+			<div class="parent">
+				<img id="profile" ng-src="{{contacts.profile_image}}" />
+				<img id="icon" ng-src="{{contacts.icon}}" />
+			</div>
+
+			<!-- Card details -->
+			<div class="details">
+
+				<h4>{{contacts.name}}</h4>
+
+				<div class="infoShow">
+					<p>{{contacts.job}} | {{contacts.company_name}}</p>
+				</div>
+
+				<div class="infoHide">
+					<p>{{contacts.phone}}</p> 
+					<p>{{contacts.email}}</p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
